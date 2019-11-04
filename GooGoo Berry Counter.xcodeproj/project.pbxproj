@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E7021B882363D1D300554654 /* GooGoo Berry Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GooGoo Berry Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7021B882363D1D300554654 /* GooGoo Berry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GooGoo Berry.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7021B8B2363D1D300554654 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7021B8D2363D1D300554654 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E7021B8F2363D1D300554654 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		E7021B892363D1D300554654 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E7021B882363D1D300554654 /* GooGoo Berry Counter.app */,
+				E7021B882363D1D300554654 /* GooGoo Berry.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,7 +84,7 @@
 			);
 			name = "GooGoo Berry Counter";
 			productName = "GooGoo Berry Counter";
-			productReference = E7021B882363D1D300554654 /* GooGoo Berry Counter.app */;
+			productReference = E7021B882363D1D300554654 /* GooGoo Berry.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -291,10 +291,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.scottbedard.GooGoo-Berry-Counter";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.scottbedard.GooGoo-Berry";
+				PRODUCT_NAME = "GooGoo Berry";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -309,10 +309,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.scottbedard.GooGoo-Berry-Counter";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.scottbedard.GooGoo-Berry";
+				PRODUCT_NAME = "GooGoo Berry";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

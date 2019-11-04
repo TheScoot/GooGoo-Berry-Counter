@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,56 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GooGoo_Berry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gingko" translatesAutoresizingMaskIntoConstraints="NO" id="IcW-s2-941">
+                                <rect key="frame" x="0.0" y="30" width="375" height="271"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="IcW-s2-941" secondAttribute="height" multiplier="18:13" id="p36-ab-44U"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="75" translatesAutoresizingMaskIntoConstraints="NO" id="dNm-Fc-Jc1">
+                                <rect key="frame" x="10" y="301" width="355" height="180.66666666666663"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="150"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="9999" translatesAutoresizingMaskIntoConstraints="NO" id="OSs-yN-EKJ">
+                                <rect key="frame" x="140.66666666666666" y="491.66666666666669" width="94" height="32.000000000000057"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="stepCounterPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="7ko-Ag-Owf"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IcW-s2-941" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="30" id="6Sp-8o-47z"/>
+                            <constraint firstItem="OSs-yN-EKJ" firstAttribute="top" secondItem="dNm-Fc-Jc1" secondAttribute="bottom" constant="10" id="Awu-08-MoF"/>
+                            <constraint firstItem="IcW-s2-941" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EG4-mH-jik"/>
+                            <constraint firstItem="IcW-s2-941" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Km4-fx-Gf4"/>
+                            <constraint firstItem="OSs-yN-EKJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vuc-gz-nm8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dNm-Fc-Jc1" secondAttribute="trailing" constant="10" id="hGF-bu-0j6"/>
+                            <constraint firstItem="dNm-Fc-Jc1" firstAttribute="top" secondItem="IcW-s2-941" secondAttribute="bottom" id="mDL-0K-sVG"/>
+                            <constraint firstItem="IcW-s2-941" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sub-CO-HGe"/>
+                            <constraint firstItem="dNm-Fc-Jc1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="t7s-tC-bHK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="countText" destination="dNm-Fc-Jc1" id="TpA-Zl-WRZ"/>
+                        <outlet property="stepper" destination="OSs-yN-EKJ" id="DEo-wF-XNT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="116.00985221674877"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gingko" width="2216" height="1472"/>
+    </resources>
 </document>
